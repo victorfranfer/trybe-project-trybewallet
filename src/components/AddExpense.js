@@ -58,7 +58,7 @@ class AddExpense extends React.Component {
     const { form, id } = this.state;
     const { edit, toEdit, updateExpenses, editExpense } = this.props;
     if (edit) {
-      editExpense({ id: toEdit.id, ...form });
+      editExpense({ id: toEdit.id, ...form, exchangeRates: toEdit.exchangeRates });
     } else {
       updateExpenses({ id, ...form });
     }
@@ -89,17 +89,17 @@ class AddExpense extends React.Component {
             id="value"
             value={ value }
             data-testid="value-input"
-            onChange={ (event) => this.handleChange(event.target) }
+            onChange={ (e) => this.handleChange(e.target) }
           />
         </label>
         <label htmlFor="description">
           Descrição:
           <input
             type="text"
-            name="description"
+            id="description"
             data-testid="description-input"
             value={ description }
-            onChange={ (event) => this.handleChange(event.target) }
+            onChange={ (e) => this.handleChange(e.target) }
           />
         </label>
         <label htmlFor="currency">
@@ -144,7 +144,7 @@ class AddExpense extends React.Component {
         <label htmlFor="tag">
           Categoria:
           <select
-            name="tag"
+            id="tag"
             data-testid="tag-input"
             value={ tag }
             onChange={ (event) => this.handleChange(event.target) }
