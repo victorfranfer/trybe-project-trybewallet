@@ -8,9 +8,8 @@ class ExpenseTable extends React.Component {
     return (parseFloat(value) * parseFloat(exchangeValue)).toFixed(2);
   }
 
-  dellExpense(id) {
+  deleteExpense(id) {
     const { delExpense, expenses } = this.props;
-    console.log(id);
 
     const upExpenses = expenses.filter((expense) => expense.id !== id);
 
@@ -69,7 +68,7 @@ class ExpenseTable extends React.Component {
                   <button
                     type="button"
                     data-testid="delete-btn"
-                    onClick={ () => this.dellExpense(expense.id) }
+                    onClick={ () => this.deleteExpense(expense.id) }
                   >
                     Deletar
                   </button>
