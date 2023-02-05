@@ -1,4 +1,4 @@
-# :construction: README customizado em construção ! :construction:
+# Trybewallet - Trybe Project
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
@@ -11,3 +11,6 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
+This project consists on building an application for personal financial control. The user can add, edit or delete their expenses. 
+
+Done in July 2022.
